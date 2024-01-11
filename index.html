@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma coisa especial</title>
+
+    <style>
+        body{
+            background-color: red;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #sim{
+            
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -10px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+            
+        }
+        }
+
+    </style>
+</head>
+<body>
+    
+   <div class="painel">
+       <h1>Posso te falar umas coisas?</h1>
+
+       <button type="button" id="sim" onclick="então()">Sim! </button>
+       <button type="button" onmouseover="fuja()" id="nao">Não! </button>
+
+       <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+
+   </div> 
+
+   <script>
+       function fuja(){
+           var botaoNao = document.getElementById("nao")
+
+           var largurajanela = window.innerWidth;
+           var alturajanela = window.innerHeight;
+
+           var maxX = largurajanela - botaoNao.offsetWidth;
+           var maxY = alturajanela - botaoNao.offsetHeight;
+
+           var aleatorioX = Math.floor(Math.random() * maxX);
+           var aleatorioY = Math.floor(Math.random() * maxY);
+
+           botaoNao.style.left = aleatorioX + "px";
+           botaoNao.style.top = aleatorioY + "px";
+       }
+
+       function então(){
+           alert("então queria te dizer que vc é muito linda, engraçada, maravilhosa e que tbm é muito importante pra mim nunca quero ver vc com a autoestima la pra baixo pois vc é uma mulher extremamente linda e que faz uma diferença enorme na minha vida viu? amo voce meu bem")
+       }
+   </script>
+</body>
+</html>
